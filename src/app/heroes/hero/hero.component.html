@@ -1,0 +1,27 @@
+<h1>Hero works!</h1>
+
+<dl class="container">
+  <td>NOMBRE:</td>
+  <dd>{{ nombre }}</dd>
+  <td>EDAD:</td>
+  <dd>{{ edad }}</dd>
+  <td>METODO:</td>
+  <dd>{{ getHeroCambio() }}</dd>
+  <td>CAPITALIZADO:</td>
+  <dd>{{ heroCapitalizado }}</dd>
+
+  <button
+    *ngIf="nombre !== 'Juan'"
+    class="btn btn-primary m-3"
+    (click)="modificarNombre()"
+  >
+    Cambiar Nombre
+  </button>
+
+  <button *ngIf="edad !== 24" class="btn btn-primary" (click)="modificarEdad()">
+    Cambiar Edad
+  </button>
+  <button *ngIf="edad !== 22" (click)="reset()" class="btn btn-primary m-2">
+    Reset
+  </button>
+</dl>
