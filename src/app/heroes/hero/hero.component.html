@@ -1,6 +1,24 @@
-<h1>Hero works!</h1>
+<h4>Agregar Personaje</h4>
 
-<dl class="container">
+<form class="row d-inline-block" (ngSubmit)="addCharacter()">
+  <input
+    [(ngModel)]="character.name"
+    name="name"
+    class="form-control"
+    type="text"
+    placeholder="Name"
+  />
+  <input
+    [(ngModel)]="character.power"
+    name="power"
+    class="form-control"
+    type="number"
+    placeholder="Powr"
+  />
+  <button type="submit" class="btn btn-primary m-2">Agregar</button>
+</form>
+
+<!-- <dl class="container">
   <td>NOMBRE:</td>
   <dd>{{ nombre }}</dd>
   <td>EDAD:</td>
@@ -11,7 +29,7 @@
   <dd>{{ heroCapitalizado }}</dd>
 
   <button
-    *ngIf="nombre !== 'Juan'"
+   
     class="btn btn-primary m-3"
     (click)="modificarNombre()"
   >
@@ -24,4 +42,4 @@
   <button *ngIf="edad !== 22" (click)="reset()" class="btn btn-primary m-2">
     Reset
   </button>
-</dl>
+</dl> -->
